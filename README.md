@@ -20,6 +20,7 @@ There is a 10k pull up resistor on the AUD (flash write) net to prevent errant i
 I've also placed a 100nF decoupling capacitor at +5V on the flash IC. This may not be necessary but I put it in as a precaution. This should be close enough to the MBC1 as well to serve a dual purpose, but if it seems like noise is an issue I may add one for it specifically in the future. If anyone wants to do math to figure out what the value should _actually_ be - go for it (just let me know).
 
 ## Compatibility/Testing
+
 # Flash IC
 **Any 32-pin 512KiB (4mbit) parallel DIP flash is _likely_ compatible.**
 I have only tested with SST39SF040-70-4C-PH and AM29040 (Aug 7 2023, Rev 1.0) but, in theory, this should also be compatible with an SST39SF040, A29040, AM29F040, W29C040, as well as SST39SF020, SST39SF010, 27C020 (eeprom), and 27C010 (eeprom) and many more as long as it is in this same package. If you're unsure, compare the pinouts. _You will be unable to write to an eeprom variant_ 
