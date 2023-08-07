@@ -51,7 +51,9 @@ I have tested 144p test suite, Super Mario Land, and MegaMan V so far on the Rev
 ## Changelog
 **Rev 1.1**
 Properly routed 1.0 bodge wires
+
 Added solder jumper bridges for MBC-less operation
+
 Additional rerouting for better grounding and aesthetics
 
 **Rev 1.0**
