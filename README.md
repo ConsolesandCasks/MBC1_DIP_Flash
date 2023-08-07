@@ -60,7 +60,15 @@ My testing utilized a GBxCart 1.4 Pro and FlashGBX to write. It will autodetect 
 
 I have tested 144p test suite, Super Mario Land, and MegaMan V so far on the Rev 1.0 boards (Aug 7 2023) using bodge wires in both MBC1 and no MBC configurations.
 
+### How to get
+I would recommend [JLCPCB](https://jlcpcb.com/) for the least expensive options for having boards fabricated
 
+Gerber silkscreen is set up for JLC to "specify a location" for the order number
+
+Options should be set to 0.8 thickness, ENIG surface finish, Gold fingers, 30 degree chamfer
+
+
+I'm having a number of Purple Rev 1.1 boards produced (Aug 7, 2023) - once tested I will look into a way to distribute them
 
 ## Changelog
 **Rev 1.1**
