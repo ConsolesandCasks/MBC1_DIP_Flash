@@ -35,7 +35,7 @@ Without MBC (w/ solder bridges jumpered) it will only support **ROM only** games
 You can check compatibility here: https://catskull.net/gb-rom-database/ - if you run into any issues with compatibility that contradicts the above, please let me know
 
 ### Writing to the Flash IC
-My testing utilized a GBxCart 1.4 Pro and FlashGBX to write. It will autodetect as "DIY cart with SST39SF040 @ AUDIO" There is no profile for A29040 but writing with the SST39SF040 @ AUDIO profile will work.
+My testing utilized a GBxCart 1.4 Pro and FlashGBX to write. It will autodetect as "DIY cart with SST39SF040 @ AUDIO" (or other supported DIY profile for other chips) There is no profile for A29040 but writing with the SST39SF040 @ AUDIO profile will work.
 I have tested 144p test suite, Super Mario Land, and MegaMan V so far on the Rev 1.0 boards (Aug 7 2023) using bodge wires in both MBC1 and no MBC configurations.
 
 
