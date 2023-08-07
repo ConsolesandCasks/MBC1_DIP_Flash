@@ -1,6 +1,8 @@
 # MBC1_DIP_Flash
 Game Boy MBC1 Flash Cart with swappable DIP flash IC (Rev 1.1 is **UNTESTED** as of Aug. 7, 2023 - on order for testing)
 
+![Populated board 3D render](https://github.com/ConsolesandCasks/MBC1_DIP_Flash/blob/main/MBC1_DIP_flash2.png)
+
 **License: CC BY-NC-SA 4.0** - https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 This uses djedditt's footprints and outlines: https://github.com/djedditt/kicad-gamepaks
@@ -23,11 +25,23 @@ There is a 10k pull up resistor on the AUD (flash write) net to prevent errant i
 
 I've also placed a 100nF decoupling capacitor at +5V on the flash IC. This may not be necessary but I put it in as a precaution. This should be close enough to the MBC1 as well to serve a dual purpose, but if it seems like noise is an issue I may add one for it specifically in the future. If anyone wants to do math to figure out what the value should _actually_ be - go for it (just let me know).
 
+## BOM
+
+| Reference        | Part Number*           | Description  | Package | Link* |
+| --- |-------------| -----| -----|------|
+| U1 | MBC1A/1B/1B1 | Memory Bank Controller | SOIC-24/SOP-24 (450mil) | [Harvested](https://catskull.net/gb-rom-database/)| 
+| U2 | SST39SF040/A29040/AM29F040 | 512KB NOR Flash | DIP-32/PDIP-32 | [Mouser](https://www.mouser.com/ProductDetail/Microchip-Technology/SST39SF040-70-4C-PHE?qs=YClUa%252B2dcx1pgizrqJ6nyQ%3D%3D) | 
+| U2* | DILB32P-223TLF | 32 pin DIP socket | DIP-32/PDIP-32 | [Mouser](https://www.mouser.com/ProductDetail/Amphenol-FCI/DILB32P-223TLF?qs=dNsYR%2FH0PyPAfvGxulPprw%3D%3D) |
+| C1 | 06033C104KAT4A | 0.1uF MLCC | 0603 SMD | [Mouser](https://www.mouser.com/ProductDetail/KYOCERA-AVX/06033C104KAT4A?qs=8C2chATdSPiv3E9zfPZulg%3D%3D) |
+| R1 | RC0603FR-0710KL | 10kOhm Thick Film Resistor | 0603 SMD | [Mouser](https://www.mouser.com/ProductDetail/YAGEO/RC0603FR-0710KL?qs=grNVn54RoB%252B3GtjbJj3wJQ%3D%3D) |
+
+*suitable alternative parts and sources exist for all components other than MBC 
+
 ## Compatibility/Testing
 
 ### Flash IC
 **Any 32-pin 512KiB (4mbit) parallel DIP flash is _likely_ compatible.**
-I have only tested with SST39SF040-70-4C-PH and AM29040 (Aug 7 2023, Rev 1.0) but, in theory, this should also be compatible with an SST39SF040, A29040, AM29F040, W29C040, as well as SST39SF020, SST39SF010, 27C020 (eeprom), and 27C010 (eeprom) and many more as long as it is in this same package. If you're unsure, compare the pinouts. _You will be unable to write to an eeprom variant_ 
+I have only tested with SST39SF040-70-4C-PH and A29040 (Aug 7 2023, Rev 1.0) but, in theory, this should also be compatible with an SST39SF040, A29040, AM29F040, W29C040, as well as SST39SF020, SST39SF010, 27C020 (eeprom), and 27C010 (eeprom) and many more as long as it is in this same package. If you're unsure, compare the pinouts. _You will be unable to write to an eeprom variant_ 
 
 NOTE: I have not tested _any_ EEPROMS and 512KiB EEPROMs are 100% incompatible without significant modification (cut the trace to pin 31 and pin 1 on the DIP and run a wire from pin 14 on the MBC to pin 31 on the flash) 
 
