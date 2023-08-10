@@ -43,7 +43,7 @@ I've also placed a 100nF decoupling capacitor at +5V on the flash IC. This may n
 **Any 32-pin 512KiB (4mbit) parallel DIP flash is _likely_ compatible.**
 I have only tested with SST39SF040-70-4C-PH and A29040 (Aug 7 2023, Rev 1.0) but, in theory, this should also be compatible with an SST39SF040, A29040, AM29F040, W29C040, as well as SST39SF020, SST39SF010, 27C020 (eeprom), and 27C010 (eeprom) and many more as long as it is in this same package. If you're unsure, compare the pinouts. _You will be unable to write to an eeprom variant_ 
 
-NOTE: I have not tested _any_ EEPROMS and 512KiB EEPROMs are 100% incompatible without significant modification (cut the trace to pin 31 and pin 1 on the DIP and run a wire from pin 14 on the MBC to pin 31 on the flash) 
+NOTE: I have not tested _any_ EEPROMS and 512KiB EEPROMs are 100% incompatible without significant modification (cut the trace to pin 31 and pin 1 on the DIP and run a wire from pin 14 on the MBC to pin 31 on the flash). Most EEPROMs will also need to be written to externally.
 
 ### Solder bridges
 The jumpers under the MBC1 are for MBC-less operation. _ONLY bridge these points if you do not plan to install an MBC1._ With the bridges soldered the board will operate in 32k mode for any game that does not require an MBC or saves
@@ -56,7 +56,8 @@ Without MBC (w/ solder bridges jumpered) it will only support **ROM only** games
 You can check compatibility here: https://catskull.net/gb-rom-database/ - if you run into any issues with compatibility that contradicts the above, please let me know
 
 ### Writing to the Flash IC
-My testing utilized a GBxCart 1.4 Pro and FlashGBX to write. It will autodetect as "DIY cart with SST39SF040 @ AUDIO" (or other supported DIY profile for other chips) There is no profile for A29040 but writing with the SST39SF040 @ AUDIO profile will work.
+My testing utilized a GBxCart 1.4 Pro and FlashGBX to write. It will autodetect as "DIY cart with SST39SF040 @ AUDIO" (or other supported DIY profile for other chips) There is no profile for A29040 but writing with the SST39SF040 @ AUDIO profile will work. For other chips, use yhe auto detected profile or try either thr SST profile or generic @ audio write profile
+GBx does not provide the necessary voltage to write to EEPROM ICs, so you will need a separate writer for such chips
 
 I have tested 144p test suite, Super Mario Land, and MegaMan V so far on the Rev 1.0 boards (Aug 7 2023) using bodge wires in both MBC1 and no MBC configurations.
 
