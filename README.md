@@ -60,7 +60,7 @@ My testing utilized a GBxCart 1.4 Pro and FlashGBX to write. It will autodetect 
 
 GBx does not provide the necessary voltage to write to EEPROM ICs, so you will need a separate writer for such chips
 
-I have tested 144p test suite, orangeglo's better button test, Super Mario Land, and MegaMan V so far on the Rev 1.0 boards (Aug 18, 2023) in both MBC1 and no MBC configurations.
+I have tested 144p test suite, orangeglo's better button test, Super Mario Land, and MegaMan V so far on the Rev 1.0 boards (Aug 18, 2023) in both MBC1 and no MBC configurations (for 144p test and bb test specifically).
 
 ### How to get
 I would recommend [JLCPCB](https://jlcpcb.com/) for the least expensive options for having boards fabricated
