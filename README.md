@@ -71,7 +71,7 @@ Options should be set to 0.8 thickness, ENIG surface finish, Gold fingers, 30 de
 
 
 I have a number of purple Rev 1.1 boards produced (Aug 18, 2023) - and I am currently looking into a way to distribute them.
-[MBC1-DIP-FLASH-Built.jpg](https://github.com/ConsolesandCasks/MBC1_DIP_Flash/blob/main/MBC1-DIP-FLASH-Built.jpg)
+![MBC1-DIP-FLASH-Built.jpg](https://github.com/ConsolesandCasks/MBC1_DIP_Flash/blob/main/MBC1-DIP-FLASH-Built.jpg)
 
 
 ## Changelog
