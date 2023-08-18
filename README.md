@@ -1,9 +1,9 @@
 # MBC1_DIP_Flash
-Game Boy MBC1 Flash Cart with swappable DIP flash IC (Rev 1.1 is **UNTESTED** as of Aug. 7, 2023 - on order for testing)
+Game Boy MBC1 Flash Cart with swappable DIP flash IC
 
 ![Populated board 3D render](https://github.com/ConsolesandCasks/MBC1_DIP_Flash/blob/main/MBC1_DIP_flash2.png)
 
-**License: CC BY-NC-SA 4.0** - https://creativecommons.org/licenses/by-nc-sa/4.0/
+**License: CC BY-SA 4.0** - https://creativecommons.org/licenses/by-sa/4.0/
 
 This uses djedditt's footprints and outlines: https://github.com/djedditt/kicad-gamepaks
 
@@ -23,7 +23,7 @@ I referenced very old schematics and pin-outs located at http://www.devrs.com/gb
 ### Passives
 There is a 10k pull up resistor on the AUD (flash write) net to prevent errant input to the Game Boy. This should be sufficient but if you're running into issues with your specific flash IC you may need to increase or decrease this value.
 
-I've also placed a 100nF decoupling capacitor at +5V on the flash IC. This may not be necessary but I put it in as a precaution. This should be close enough to the MBC1 as well to serve a dual purpose, but if it seems like noise is an issue I may add one for it specifically in the future. If anyone wants to do math to figure out what the value should _actually_ be - go for it (just let me know).
+I've also placed a 100nF decoupling capacitor at +5V on the flash IC. This should be close enough to the MBC1 as well to serve a dual purpose, but if it seems like noise is an issue I may add one for it specifically in the future. If anyone wants to do math to figure out what the value should _actually_ be - go for it (just let me know).
 
 ## BOM
 
@@ -41,12 +41,12 @@ I've also placed a 100nF decoupling capacitor at +5V on the flash IC. This may n
 
 ### Flash IC
 **Any 32-pin 512KiB (4mbit) parallel DIP flash is _likely_ compatible.**
-I have only tested with SST39SF040-70-4C-PH and A29040 (Aug 7 2023, Rev 1.0) but, in theory, this should also be compatible with an SST39SF040, A29040, AM29F040, W29C040, as well as SST39SF020, SST39SF010, 27C020 (eeprom), and 27C010 (eeprom) and many more as long as it is in this same package. If you're unsure, compare the pinouts. _You will be unable to write to an eeprom variant_ 
+I have only tested with SST39SF040-70-4C-PH and A29040 (Aug 18 2023, Rev 1.1) but, in theory, this should also be compatible with an SST39SF040, A29040, AM29F040, W29C040, as well as SST39SF020, SST39SF010, 27C020 (eeprom), and 27C010 (eeprom) and many more as long as it is in this same package. If you're unsure, compare the pinouts. _You will be unable to write to an eeprom variant_ 
 
-NOTE: I have not tested _any_ EEPROMS and 512KiB EEPROMs are 100% incompatible without significant modification (cut the trace to pin 31 and pin 1 on the DIP and run a wire from pin 14 on the MBC to pin 31 on the flash). Most EEPROMs will also need to be written to externally.
+NOTE: I have not tested _any_ EEPROMS (and 512KiB EEPROMs are 100% incompatible without significant modification - cut the trace to pin 31 and pin 1 on the DIP and run a wire from pin 14 on the MBC to pin 31 on the flash). Most EEPROMs will also need to be written to externally with something like a universal programmer, rather than through a cart writer device.
 
 ### Solder bridges
-The jumpers under the MBC1 are for MBC-less operation. _ONLY bridge these points if you do not plan to install an MBC1._ With the bridges soldered the board will operate in 32k mode for any game that does not require an MBC or saves
+The jumpers under the MBC1 are for MBC-less operation. _ONLY bridge these points if you do not plan to install an MBC1._ With the bridges soldered the board will operate in 32k mode for any game of that size that does not require an MBC or saves.
 
 ### ROM support
 With MBC it should support any GB rom that is either **ROM only, or MBC1+ROM only up to 512KiB**, there is **NO SAVE FUNCTION ON THIS BOARD**
@@ -60,17 +60,19 @@ My testing utilized a GBxCart 1.4 Pro and FlashGBX to write. It will autodetect 
 
 GBx does not provide the necessary voltage to write to EEPROM ICs, so you will need a separate writer for such chips
 
-I have tested 144p test suite, Super Mario Land, and MegaMan V so far on the Rev 1.0 boards (Aug 7 2023) using bodge wires in both MBC1 and no MBC configurations.
+I have tested 144p test suite, orangeglo's better button test, Super Mario Land, and MegaMan V so far on the Rev 1.0 boards (Aug 18, 2023) in both MBC1 and no MBC configurations.
 
 ### How to get
 I would recommend [JLCPCB](https://jlcpcb.com/) for the least expensive options for having boards fabricated
 
-Gerber silkscreen is set up for JLC to "specify a location" for the order number
+Gerber silkscreen is set up for JLC to "specify a location" for the order number (seperate gerber files will be added if you choose to remove the order number or use a different PCB fabricator service
 
 Options should be set to 0.8 thickness, ENIG surface finish, Gold fingers, 30 degree chamfer
 
 
-I'm having a number of Purple Rev 1.1 boards produced (Aug 7, 2023) - once tested I will look into a way to distribute them
+I have a number of purple Rev 1.1 boards produced (Aug 18, 2023) - and I am currently looking into a way to distribute them.
+[MBC1-DIP-FLASH-Built.jpg](https://github.com/ConsolesandCasks/MBC1_DIP_Flash/blob/main/MBC1-DIP-FLASH-Built.jpg)
+
 
 ## Changelog
 **Rev 1.1**
