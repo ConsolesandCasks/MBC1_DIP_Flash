@@ -73,6 +73,14 @@ Options should be set to 0.8 thickness, ENIG surface finish, Gold fingers, 30 de
 I have a number of purple Rev 1.1 boards produced (Aug 18, 2023) - and I am currently looking into a way to distribute them.
 ![MBC1-DIP-FLASH-Built.jpg](https://github.com/ConsolesandCasks/MBC1_DIP_Flash/blob/main/MBC1-DIP-FLASH-Built.jpg)
 
+## Notes on shell fitment
+The through-hole pins on the back of the DIP connector will likely need to be trimmed so the board can sit somewhat flat against a shell back. Most of my testing has been simply with the board resting against a shell back inserted into GBxCart or a Game Boy.
+I have tested these with the 3 standard single-screw style OEM shells and Kitsch-Bent shell *backs*.
+
+For a more permanent shell, "Half-shell" Kitsch-Bent shells are likely ideal. [KB Referral Link](https://kitsch-bent.refr.cc/consolescasks) *NOTE: I have not tested these yet, but because of the size and location of the cutout, I'm pretty confident on proper fit. 
+
+To use an OEM shell (or aftermarket like CGS) front, you need to cut the front of the shell approximately 1/3 of the way down (slightly below where the label begins and just above where the pin on the back rests on a DMG shell; On a GBC cart it should be just barely into the label cutout). You should also be able to cut a *slot* the width of the Game Boy Logo grip (down to the same point).
+
 
 ## Changelog
 **Rev 1.1**
