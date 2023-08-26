@@ -75,9 +75,11 @@ I have a number of purple Rev 1.1 boards produced (Aug 18, 2023) - and I am curr
 
 ## Notes on shell fitment
 The through-hole pins on the back of the DIP connector will likely need to be trimmed so the board can sit somewhat flat against a shell back. Most of my testing has been simply with the board resting against a shell back inserted into GBxCart or a Game Boy.
-I have tested these with the 3 standard single-screw style OEM shells and Kitsch-Bent shell *backs*.
+I have tested these with the 3 standard single-screw style OEM shells *backs*, and Kitsch-Bent "half-shell" front+backs
 
-For a more permanent shell, "Half-shell" Kitsch-Bent shells are likely ideal. [KB Referral Link](https://kitsch-bent.refr.cc/consolescasks) *NOTE: I have not tested these yet, but because of the size and location of the cutout, I'm pretty confident on proper fit. 
+![KB shell fit](https://github.com/ConsolesandCasks/MBC1_DIP_Flash/blob/main/MBC1_DIP_flash_KBshells.jpg)
+
+For a more permanent shell, "Half-shell" Kitsch-Bent shells (shown above) are ideal. [KB Referral Link](https://kitsch-bent.refr.cc/consolescasks) 
 
 To use an OEM shell (or aftermarket like CGS) front, you need to cut the front of the shell approximately 1/3 of the way down (slightly below where the label begins and just above where the pin on the back rests on a DMG shell; On a GBC cart it should be just barely into the label cutout). You should also be able to cut a *slot* the width of the Game Boy Logo grip (down to the same point).
 
