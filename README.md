@@ -60,7 +60,7 @@ My testing utilized a GBxCart 1.4 Pro and FlashGBX to write. It will autodetect 
 
 GBx does not provide the necessary voltage to write to EEPROM ICs, so you will need a separate writer for such chips
 
-I have tested 144p test suite, orangeglo's better button test, Super Mario Land, and MegaMan V so far on the Rev 1.0 boards (Aug 18, 2023) in both MBC1 and no MBC configurations (for 144p test and bb test specifically).
+I have tested 144p test suite, orangeglo's better button test, Super Mario Land, and MegaMan V so far in both MBC1 and no MBC configurations (for 144p test and bb test specifically). Other games have been tested and confirmed working (Sep 2, 2023).
 
 ### How to get
 I would recommend [JLCPCB](https://jlcpcb.com/) for the least expensive options for having boards fabricated
@@ -70,7 +70,10 @@ Gerber silkscreen is set up for JLC to "specify a location" for the order number
 Options should be set to 0.8 thickness, ENIG surface finish, Gold fingers, 30 degree chamfer
 
 
-I have a number of purple Rev 1.1 boards produced (Aug 18, 2023) - and I am currently looking into a way to distribute them.
+I have a number of purple Rev 1.1 boards available (Sep. 2, 2023) - these are available for various trades or for purchase on my Ko-fi soon (US only). 
+
+[Ko-fi shop listing](https://ko-fi.com/s/8536ca548f)
+
 ![MBC1-DIP-FLASH-Built.jpg](https://github.com/ConsolesandCasks/MBC1_DIP_Flash/blob/main/MBC1-DIP-FLASH-Built.jpg)
 
 ## Notes on shell fitment
