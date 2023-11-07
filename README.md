@@ -86,6 +86,11 @@ For a more permanent shell, "Half-shell" Kitsch-Bent shells (shown above) are id
 
 To use an OEM shell (or aftermarket like CGS) front, you need to cut the front of the shell approximately 1/3 of the way down (slightly below where the label begins and just above where the pin on the back rests on a DMG shell; On a GBC cart it should be just barely into the label cutout). You should also be able to cut a *slot* the width of the Game Boy Logo grip (down to the same point).
 
+## Disclaimer
+I am not responsible for any damage you do to your person or property. I do not guarantee design compatibility. You may encounter issues with certain games! Attempt this project at your own risk.
+
+If you are using this board to make games other than for personal use, you must have permission from the originator to use and distribute any ROM images or other related material. You are responsible for making sure you adhere to any license requirements. DO NOT use my circuit boards to distribute or resell copyrighted Nintendo software. DO NOT use my circuit boards for profiting from stolen work - this especially includes homebrew content, ROM hacks, and using fan-made labels without permission from the originator.
+
 
 ## Changelog
 **Rev 1.1**
